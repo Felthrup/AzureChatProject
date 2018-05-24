@@ -16,6 +16,14 @@ var LocalStrategy = require('passport-local').Strategy;
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+/*
+var mongoClient = require("mongodb").MongoClient;
+mongoClient.connect("mongodb://chatdb-azureelective:xT70G46xyrYMMpOaTnddsGdZrR9eZqXEBME2FsLx5nryQe1Pv9UzVGIQUmRpbMo8CmtZwcBErjShI6n7Faf2vw%3D%3D@chatdb-azureelective.documents.azure.com:10255/?ssl=true", function (err, client) {
+  client.close();
+});
+
+*/
+
 // app init
 var app = express();
 
@@ -77,7 +85,8 @@ io.on('connection', (socket) => {
     });
 });
 
-mongoose.connect('mongodb://localhost/blackchad');
+//mongoose.connect('mongodb://localhost/blackchad');
+mongoose.connect("mongodb://chatdb-azureelective:xT70G46xyrYMMpOaTnddsGdZrR9eZqXEBME2FsLx5nryQe1Pv9UzVGIQUmRpbMo8CmtZwcBErjShI6n7Faf2vw%3D%3D@chatdb-azureelective.documents.azure.com:10255/?ssl=true");
 var db = mongoose.connection;
 
 // Setting up view engine
