@@ -1,0 +1,33 @@
+{
+    "name": "blackchad",
+    "version": "1.0.0",
+    "description": "Simple chat system with authentication",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "mocha"
+    },
+    "author": "Morten Wiborg",
+    "dependencies": {
+        "bcryptjs": "*",
+        "body-parser": "*",
+        "chai": "^4.1.2",
+        "connect-flash": "*",
+        "cookie-parser": "^1.4.1",
+        "express": "*",
+        "express-handlebars": "*",
+        "express-messages": "*",
+        "express-session": "*",
+        "express-validator": "*",
+        "mocha": "^5.1.1",
+        "mongodb": "*",
+        "mongoose": "*",
+        "passport": "*",
+        "passport-http": "*",
+        "passport-local": "*",
+        "socket.io": "^2.1.0"
+    },
+    "devDependencies": {
+        "request": "^2.85.0"
+    }
+}
