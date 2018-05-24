@@ -86,7 +86,7 @@ io.on('connection', (socket) => {
 });
 
 //mongoose.connect('mongodb://localhost/blackchad');
-mongoose.connect("mongodb://chatdb-azureelective:xT70G46xyrYMMpOaTnddsGdZrR9eZqXEBME2FsLx5nryQe1Pv9UzVGIQUmRpbMo8CmtZwcBErjShI6n7Faf2vw%3D%3D@chatdb-azureelective.documents.azure.com:10255/?ssl=true");
+mongoose.connect("mongodb://chatdb-azureelective:xT70G46xyrYMMpOaTnddsGdZrR9eZqXEBME2FsLx5nryQe1Pv9UzVGIQUmRpbMo8CmtZwcBErjShI6n7Faf2vw%3D%3D@chatdb-azureelective.documents.azure.com:10255/?ssl=true&sslverifycertificate=false");
 var db = mongoose.connection;
 
 // Setting up view engine
