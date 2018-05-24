@@ -33,6 +33,9 @@ const dbUrl = 'mongodb://localhost:27017';
 // Database Name
 const dbName = 'blackchad';
 
+// set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 const server = require("http").Server(app);
 let io = require("socket.io")(server); // has a list of all connected clients and manages them
 
@@ -99,9 +102,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// set public folder
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Express session middleware
 app.use(session({
     secret: 'chadisrad', // use to sign session ID cookie - newer version of express-session no longer needs cookie-parser middleware, if used can cause problems unless they use the same secret
@@ -148,7 +148,7 @@ app.use('/', routes); // / to routes (index)
 app.use('/users', users); // /users to users
 
 
-server.listen("3000", function(err) {
+server.listen("3000n", function(err) {
     if (err) {
         console.log(err);
     }
