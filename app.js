@@ -148,7 +148,7 @@ app.use('/', routes); // / to routes (index)
 app.use('/users', users); // /users to users
 
 
-server.listen("3000n", function(err) {
+server.listen("3000", function(err) {
     if (err) {
         console.log(err);
     }
