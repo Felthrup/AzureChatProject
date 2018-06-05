@@ -147,8 +147,8 @@ app.use(function (req, res, next) {
 app.use('/', routes); // / to routes (index)
 app.use('/users', users); // /users to users
 
-
-server.listen("3000", function(err) {
+var port = process.env.PORT || 3000;
+server.listen(port, function(err) {
     if (err) {
         console.log(err);
     }
